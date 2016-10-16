@@ -1,0 +1,52 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+<include file="struts-default.xml"/>
+<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+
+<package name="lab2" extends="struts-default">
+	<action name="SearchAuthor" class="lab2.SearchAuthor">
+		<result name="success">/title.jsp</result>
+		<result name="error">/titleerror.jsp</result>
+	</action>
+	<action name="Print" class="lab2.SelectSql">
+		<result name="success">/all.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="Delete" class="lab2.SelectSql" method="delete">
+		<result name="success">/all.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="Select" class="lab2.Select">
+		<result name="success">/message.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="Insert" class="lab2.Insert">
+		<result name="success">/InsertSuccess.jsp</result>
+		<result name="input">/insertAuthor.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="Insert2">
+		<result>/insert.jsp</result>
+	</action>
+	<action name="Insert3" class="lab2.Insert" method="insertauthor">
+		<result name="success">/InsertSuccess.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="update" class="lab2.Update" method="print">
+		<result>/update.jsp</result>
+	</action>
+	<action name="update2" class="lab2.Update">
+		<result name="success">/updateSuccess.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	<action name="index">
+		<result>/index.jsp</result>
+	</action>
+	<action name="search">
+		<result>/search.jsp</result>
+	</action>
+</package>
+
+</struts>
