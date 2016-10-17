@@ -14,7 +14,7 @@ public class Lian {
         } catch (ClassNotFoundException e) {           
             e.printStackTrace();  
         }                    
-		//nkywraxknsjb.rds.sae.sina.com.cn:10584
+		
         java.sql.Connection conn = java.sql.DriverManager.getConnection(  
                 "jdbc:mysql://nkywraxknsjb.rds.sae.sina.com.cn:10584/bookdb?autoReconnect=true&useUnicode=true&characterEncoding=utf8",  
                 "root", "19951224");
